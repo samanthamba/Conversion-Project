@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Length Conversion Calculator</title>
+ <style>
+ 	body { font-family:Arial; }
+ 	button { border-radius: 20px; }
+ 	#all {
+			margin-top: 170px;
+			border: solid;
+			border-color: #7B567A;
+			width: 800px;
+			height: 300px;
+			border-radius: 20px;
+			background-color: #AF8CAF;
+			text-align: middle;
+      padding: 10px;
+		}
+	.convert { padding: 8px 16px;
+    background-color: #7B567A;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; }
+ </style>
+  <script>
+    function convert() {
+      var mm = parseFloat(document.getElementById("mmInput").value);
+      var cm = mm / 10;
+      var m = mm / 1000;
+      var km = mm / 1000000;
+
+      document.getElementById("cmOutput").value = cm;
+      document.getElementById("mOutput").value = m;
+      document.getElementById("kmOutput").value = km;
+    }
+  </script>
+</head>
+<body bgcolor="#DFB3DF">
+<center>
+<div id="all">
+  <h1>LENGTH CONVERSION CALCULATOR</h1>
+ <div class="row"> 
+ <div class="col-md-5">
+ 	<h3>
+  <label for="mmInput">Millimeters</label>
+  <input type="number" id="mmInput">
+  <button class= "convert" onclick="convert()">Convert</button>
+  	</h3>
+  </div>
+  <div class="col-md-2"><h2>Results:</h2></div>
+	<div class="col-md-5">
+	<h3>
+  <label for="cmOutput">Centimeters</label>
+  <input type="number" id="cmOutput" disabled><br>
+  <label for="mOutput">Meters</label>
+  <input type="number" id="mOutput" disabled><br>
+  <label for="kmOutput">Kilometers</label>
+  <input type="number" id="kmOutput" disabled>
+  	<h3>
+ </div> 
+</body>
+</center>
+</html>
